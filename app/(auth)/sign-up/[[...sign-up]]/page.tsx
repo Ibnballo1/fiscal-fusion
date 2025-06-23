@@ -1,7 +1,7 @@
 // import { SignUp } from "@clerk/nextjs";
 import Image from "next/image";
 import AuthForm from "@/components/ui/AuthForm";
-export default function Page() {
+export default function SignUpPage() {
   return (
     <div className="h-screen bg-[#F0F0F0] p-4 gap-4 grid grid-cols-1 lg:grid-cols-2">
       {/* SIGNUP FORM */}

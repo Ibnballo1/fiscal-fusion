@@ -19,9 +19,12 @@ import { Checkbox } from "./checkbox";
 import Link from "next/link";
 import PassWordVisibility from "../PwdVisibilty";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function AuthForm() {
   const [pwdInputType, setPwdInputType] = useState("password");
+  const pathname = usePathname();
+  console.log("pathname:", pathname);
   return (
     <Card className="w-full h-full p-8 bg-[#FCFCFC]">
       <CardHeader className="flex flex-col items-center">
@@ -32,16 +35,19 @@ export default function AuthForm() {
               variant="link"
               className="text-[16px] bg-[#FBF1E4CC] font-medium rounded-xl py-2 px-6 w-full text-[#DE8D25]"
             >
-              SIGN UP
+              {pathname === "/sign-in" ? "SIGN IN" : "SIGN UP"}
             </Button>
           </CardAction>
         </div>
         <CardTitle>
-          <h1 className="text-4xl font-medium text-[#1A1A1A]">Welcome!</h1>
+          <h1 className="text-4xl font-medium text-[#1A1A1A]">
+            Welcome {pathname === "/sign-in" && <span>back</span>}!
+          </h1>
         </CardTitle>
         <CardDescription className="font-normal text-muted-foreground text-center">
-          Welcome to Fiscal Fusion! Sign up with your email to get started with
-          Fiscal Fusion
+          Welcome {pathname === "/sign-in" && <span>back</span>} to Fiscal
+          Fusion! Sign {pathname === "/sign-in" ? "in" : "up"} with your email
+          to get started with Fiscal Fusion
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -94,14 +100,14 @@ export default function AuthForm() {
       </CardContent>
       <CardFooter className="flex-col gap-2">
         <Button type="submit" className="w-full bg-[#235E2F]">
-          Sign Up
+          Sign {pathname === "/sign-in" ? "In" : "Up"}
         </Button>
 
         <div className="self-start mt-2">
           <span>
-            Have and account?{" "}
+            {pathname === "/sign-up" && "Don't"} Have an account?{" "}
             <Link href="/sign-in" className="text-blue-500">
-              Sign In
+              Sign {pathname === "/sign-in" ? "Up" : "In"}
             </Link>
           </span>
         </div>
