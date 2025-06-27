@@ -15,11 +15,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 // import { Separator } from "./separator";
-import { Checkbox } from "./checkbox";
+import { Checkbox } from "./ui/checkbox";
 import Link from "next/link";
-import PassWordVisibility from "../PwdVisibilty";
+import PassWordVisibility from "./PwdVisibilty";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import HeaderLogo from "./HeaderLogo";
 
 export default function AuthForm() {
   const [pwdInputType, setPwdInputType] = useState("password");
@@ -28,17 +29,8 @@ export default function AuthForm() {
   return (
     <Card className="w-full h-full p-8 bg-[#FCFCFC]">
       <CardHeader className="flex flex-col items-center">
-        <div className="flex flex-col items-center text-center gap-4">
-          <Image src="/logo.png" alt="Company Logo" width={106} height={33} />
-          <CardAction className="w-full">
-            <Button
-              variant="link"
-              className="text-[16px] bg-[#FBF1E4CC] font-medium rounded-xl py-2 px-6 w-full text-[#DE8D25]"
-            >
-              {pathname === "/sign-in" ? "SIGN IN" : "SIGN UP"}
-            </Button>
-          </CardAction>
-        </div>
+        {/* LOGO */}
+        <HeaderLogo />
         <CardTitle>
           <h1 className="text-4xl font-medium text-[#1A1A1A]">
             Welcome {pathname === "/sign-in" && <span>back</span>}!
