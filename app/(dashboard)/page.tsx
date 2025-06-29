@@ -2,11 +2,9 @@
 
 export default function Home() {
   return (
-    <div className="bg-background">
-      {/* TOP BAR */}
-      <div className="">Top Bar</div>
-      {/* LEFT SIDE BAR */}
-      <div className="">Left Bar</div>
+    <div className="bg-background w-full">
+      {/* NAV BAR */}
+
       {/* RIGHT SIDE CONTENT */}
       <main className="">
         <div className="">Main Content</div>

@@ -1,6 +1,7 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/AppSidebar";
 import { cookies } from "next/headers";
+import Navbar from "@/components/Navbar";
 
 export default async function RootLayout({
   children,
@@ -12,8 +13,8 @@ export default async function RootLayout({
   return (
     <SidebarProvider defaultOpen={defaultOpen}>
       <AppSidebar />
-      <main>
-        <SidebarTrigger />
+      <main className="flex flex-col border-2 border-red-500 w-full">
+        <Navbar />
         {children}
       </main>
     </SidebarProvider>

@@ -88,7 +88,7 @@ const AppSidebar = () => {
           <SidebarGroupContent>
             <SidebarMenu>
               {sidebarItems.map((item) => (
-                <SidebarMenuItem className="" key={item.title}>
+                <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
                     className="pl-4 py-2 focus:font-medium"
