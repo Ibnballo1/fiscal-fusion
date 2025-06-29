@@ -13,7 +13,7 @@ export default async function RootLayout({
   return (
     <SidebarProvider defaultOpen={defaultOpen}>
       <AppSidebar />
-      <main className="flex flex-col border-2 border-red-500 w-full">
+      <main className="flex flex-col w-full">
         <Navbar />
         {children}
       </main>

@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center border border-green-600 p-4 justify-between sticky top-0 bg-background z-10">
+    <nav className="flex items-center border-b p-4 justify-between sticky top-0 bg-background z-10">
       {/* LEFT BAR */}
       <div className="flex p-0 flex-1/4 items-center">
         <SidebarTrigger />
