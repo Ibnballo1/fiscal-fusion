@@ -1,8 +1,10 @@
 // import { Button } from "@/components/ui/button";
 
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -142,6 +144,41 @@ export default function Home() {
             ))}
           </TableBody>
         </Table>
+      </div>
+      {/* BOTTOM */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="border rounded-2xl mt-4 p-4 flex justify-center items-center flex-col gap-2">
+          <div className="w-[52px] h-[52px] rounded-xl bg-[#EAAEAE99] flex justify-center items-center">
+            <ShoppingBag className="h-7 w-7" style={{ color: "#7A1F1F" }} />
+          </div>
+          <div className="w-[300px] flex flex-col justify-center items-center">
+            <h3 className="font-medium text-xl text-[#1a1a1a]">
+              Manage Reseller
+            </h3>
+            <p className="text-center text-[#656565]">
+              Go to the Resellers page to manage reseller accounts and settings.
+            </p>
+          </div>
+
+          <Button className="border-2 border-transparent bg-[#235E2F] hover:bg-[#235E2F] hover:border-[#AADFB4]">
+            Go to Resellers
+          </Button>
+        </div>
+        <div className="border rounded-2xl mt-4 p-4 flex justify-center items-center flex-col gap-2">
+          <div className="w-[52px] h-[52px] rounded-xl bg-[#EAAEAE99] flex justify-center items-center">
+            <Users2 className="h-7 w-7" style={{ color: "#7A1F1F" }} />
+          </div>
+          <div className="w-[300px] flex flex-col justify-center items-center">
+            <h3 className="font-medium text-xl text-[#1a1a1a]">View Clients</h3>
+            <p className="text-center text-[#656565]">
+              Visit the Client dashboard to manage client info and activities.
+            </p>
+          </div>
+
+          <Button className="border-2 border-transparent bg-[#235E2F] hover:bg-[#235E2F] hover:border-[#AADFB4]">
+            Go to Clients
+          </Button>
+        </div>
       </div>
     </div>
   );
