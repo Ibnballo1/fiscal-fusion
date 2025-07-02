@@ -1,5 +1,6 @@
 // import { Button } from "@/components/ui/button";
 
+import ActivityLogPage from "@/components/ActivityLogs";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,7 +19,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Banknote, ShoppingBag, Users2 } from "lucide-react";
+import { Banknote, Power, ShoppingBag, Users2 } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -178,6 +179,19 @@ export default function Home() {
           <Button className="border-2 border-transparent bg-[#235E2F] hover:bg-[#235E2F] hover:border-[#AADFB4]">
             Go to Clients
           </Button>
+        </div>
+      </div>
+      {/* DATA TABLE */}
+      <div className="border pt-4 rounded-lg">
+        <div className="flex justify-between items-center mb-4 px-4">
+          <h3 className="font-medium">Activity Log</h3>
+          <Button className="bg-[#235E2F]">
+            <Power className="h-4 w-4" />
+            <span>Export</span>
+          </Button>
+        </div>
+        <div>
+          <ActivityLogPage />
         </div>
       </div>
     </div>
