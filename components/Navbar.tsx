@@ -9,6 +9,7 @@ import {
 } from "./ui/breadcrumb";
 import { SidebarTrigger } from "./ui/sidebar";
 import { Button } from "./ui/button";
+import AddResellerForm from "./AddResellerForm";
 
 const Navbar = () => {
   return (
@@ -45,9 +46,7 @@ const Navbar = () => {
         <Bell className="h-5 w-5 text-gray-500 cursor-pointer" />
         <Button variant="outline">Broadcast Announcement</Button>
         <Button variant="outline">Run System Audit</Button>
-        <Button className="bg-[#235E2F]" variant="default">
-          Add Reseller
-        </Button>
+        <AddResellerForm />
       </div>
     </nav>
   );
