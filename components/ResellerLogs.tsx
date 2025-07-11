@@ -403,7 +403,7 @@ async function getData(): Promise<Activity[]> {
   ];
 }
 
-export default async function ActivityLogPage() {
+export default async function ResellerLogPage() {
   const data = await getData();
 
   return (

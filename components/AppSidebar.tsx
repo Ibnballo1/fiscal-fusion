@@ -36,22 +36,22 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 const sidebarItems = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/",
     icon: LayoutDashboard,
   },
   {
     title: "Resellers",
-    url: "#",
+    url: "/resellers",
     icon: ShoppingBag,
   },
   {
     title: "Clients",
-    url: "#",
+    url: "/clients",
     icon: Users2,
   },
   {
     title: "Financials",
-    url: "#",
+    url: "/financials",
     icon: Banknote,
   },
   {
