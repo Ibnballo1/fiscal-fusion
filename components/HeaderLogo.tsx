@@ -7,7 +7,7 @@ const HeaderLogo = () => {
   const pathname = usePathname();
   return (
     <div className="flex flex-col items-center text-center gap-4">
-      <Image src="/logo.png" alt="Company Logo" width={106} height={33} />
+      <Image src="/logo.svg" alt="Company Logo" width={106} height={33} />
       <CardAction className="w-full">
         <Button
           variant="link"
