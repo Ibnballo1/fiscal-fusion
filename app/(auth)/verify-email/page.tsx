@@ -67,7 +67,7 @@ const VerifyEmailPage = () => {
                   name="pin"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-center block font-medium text-4xl text-[#1A1A1A]">
+                      <FormLabel className="text-center block font-medium text-4xl text-foreground">
                         Verify Email
                       </FormLabel>
                       <FormDescription className="text-center">
@@ -116,8 +116,8 @@ const VerifyEmailPage = () => {
                     Verify
                   </Button>
                   <div className="mt-2">
-                    <p className="text-[#1a1a1a] text-sm">
-                      Didn’t receive any code?{" "}
+                    <p className="text-foreground text-sm">
+                      Didn't receive any code?{" "}
                       <Link href="#" className="text-[#1459FC]">
                         Click to resend
                       </Link>
@@ -129,7 +129,7 @@ const VerifyEmailPage = () => {
           </CardContent>
           <CardFooter className="w-full p-0">
             <div className="mt-12 w-full self-baseline flex justify-between">
-              <Link href="#" className="text-[#656565] font-normal">
+              <Link href="#" className="text-muted-foreground font-normal">
                 Privacy Policy
               </Link>
               <h3 className="text-[#DE8D25] text-xl">Fiscal Fusion</h3>

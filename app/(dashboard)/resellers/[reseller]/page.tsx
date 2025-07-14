@@ -103,10 +103,12 @@ const ResellerPage = () => {
             </div>
             <div className="">
               <p className="text-[#235E2F]">#1</p>
-              <h3 className="leading-5 text-[#1A1A1A] text-xl">
+              <h3 className="leading-5 text-foreground text-xl">
                 CloudSync Partners
               </h3>
-              <p className="text-[#656565] text-sm">Cloudsync@sample.com</p>
+              <p className="text-muted-foreground text-sm">
+                Cloudsync@sample.com
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-end gap-4">
@@ -118,9 +120,9 @@ const ResellerPage = () => {
             </Button>
             <div className="flex items-baseline-last gap-2">
               <Calendar className="w-4 h-4" />
-              <p className="text-[#656565] text-xs">
+              <p className="text-muted-foreground text-xs">
                 Date Joined:
-                <span className="text-[#1a1a1a]"> 10th of June, 2025</span>
+                <span className="text-foreground"> 10th of June, 2025</span>
               </p>
             </div>
           </div>
@@ -140,44 +142,52 @@ const ResellerPage = () => {
                 />
               </div>
               <div className="flex flex-col items-start pl-2">
-                <span className="text-[#656565] text-xs">{item.type}</span>
-                <span className="text-[#1a1a1a] text-sm">{item.means}</span>
+                <span className="text-muted-foreground text-xs">
+                  {item.type}
+                </span>
+                <span className="text-foreground text-sm">{item.means}</span>
               </div>
             </div>
           ))}
         </div>
         <div className="mb-4 flex justify-between border-b pb-3 gap-4">
           <div className="flex flex-col gap-2">
-            <h2 className="font-medium text-xl text-[#1A1A1A]">Earnings</h2>
+            <h2 className="font-medium text-xl text-foreground">Earnings</h2>
             <div className="flex gap-4">
               <div className="border rounded-lg p-4 pr-12 space-y-6 ">
-                <h4 className="text-[#656565] text-xs">Total Earnings</h4>
+                <h4 className="text-muted-foreground text-xs">
+                  Total Earnings
+                </h4>
                 <div>
-                  <p className="text-xl font-medium text-[#1A1A1A]">
-                    $350 <span className="text-[#656565] text-xs">Paid</span>
+                  <p className="text-xl font-medium text-foreground">
+                    $350{" "}
+                    <span className="text-muted-foreground text-xs">Paid</span>
                   </p>
                   <p className="text-[#1FC16B] text-xs">
                     +150
-                    <span className="text-[#656565]"> pending</span>
+                    <span className="text-muted-foreground"> pending</span>
                   </p>
                 </div>
               </div>
               <div className="border rounded-lg p-4 pr-12 space-y-6 ">
-                <h4 className="text-[#656565] text-xs">Revenue Generated</h4>
+                <h4 className="text-muted-foreground text-xs">
+                  Revenue Generated
+                </h4>
                 <div>
-                  <p className="text-xl font-medium text-[#1A1A1A]">
-                    $350 <span className="text-[#656565] text-xs">Gross</span>
+                  <p className="text-xl font-medium text-foreground">
+                    $350{" "}
+                    <span className="text-muted-foreground text-xs">Gross</span>
                   </p>
                   <p className="text-[#1FC16B] text-xs">
                     +150
-                    <span className="text-[#656565]"> net</span>
+                    <span className="text-muted-foreground"> net</span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex-1">
-            <h2 className="font-medium text-xl text-[#1A1A1A] mb-1.5">
+            <h2 className="font-medium text-xl text-foreground mb-1.5">
               Customer Tier
             </h2>
             <div className="rounded-lg p-4 bg-[#FFF5C2]">
@@ -190,12 +200,12 @@ const ResellerPage = () => {
                   </div>
                   <div className="flex flex-col justify-between">
                     <div className="flex gap-4">
-                      <p className="text-[#656565] text-sm">Tier 1</p>
+                      <p className="text-muted-foreground text-sm">Tier 1</p>
                       <p className="text-[10px] text-[#1459FC] rounded-lg bg-[#E2EAFF] px-2 py-1">
                         Default
                       </p>
                     </div>
-                    <h4 className="font-medium text-[#1a1a1a]">Gold Tier</h4>
+                    <h4 className="font-medium text-foreground">Gold Tier</h4>
                   </div>
                 </div>
                 <div>
@@ -206,16 +216,18 @@ const ResellerPage = () => {
                 </div>
                 {/* right */}
                 <div>
-                  <p className="text-[#656565] text-sm">
+                  <p className="text-muted-foreground text-sm">
                     Affiliates on this tier
                   </p>
-                  <h4 className="text-[#1A1A1A] font-medium">21</h4>
+                  <h4 className="text-foreground font-medium">21</h4>
                 </div>
               </div>
               {/* bottom */}
               <div>
-                <p className="text-[#656565] text-sm">Upgrade Requirements</p>
-                <ul className="list-disc pl-4 text-[#1A1A1A] text-sm">
+                <p className="text-muted-foreground text-sm">
+                  Upgrade Requirements
+                </p>
+                <ul className="list-disc pl-4 text-foreground text-sm">
                   <li>Minimum of 20 Clients</li>
                 </ul>
               </div>
@@ -240,7 +252,7 @@ const ResellerPage = () => {
           {cardList.map((card, index) => (
             <Card key={index}>
               <CardHeader>
-                <CardTitle className="text-[#656565] text-sm flex gap-1 items-center">
+                <CardTitle className="text-muted-foreground text-sm flex gap-1 items-center">
                   {card.icon}
                   <span>{card.title}</span>
                 </CardTitle>
@@ -266,7 +278,7 @@ const ResellerPage = () => {
         <div className="flex justify-between items-center mb-5">
           {/* left */}
           <div>
-            <h3 className="font-medium text-[#1a1a1a] text-lg">
+            <h3 className="font-medium text-foreground text-lg">
               Affiliate Payout Details
             </h3>
           </div>
@@ -283,24 +295,28 @@ const ResellerPage = () => {
           {/* above */}
           <div className="flex gap-2">
             <Image src="/bank2.png" width={20} height={20} alt="Bank" />
-            <span className="text-[#1a1a1a] text-sm">Bank Account Details</span>
+            <span className="text-foreground text-sm">
+              Bank Account Details
+            </span>
           </div>
           {/* below */}
           <div className="flex gap-2 justify-between">
             <div>
-              <h4 className="text-sm text-[#656565]">Bank Country</h4>
+              <h4 className="text-sm text-muted-foreground">Bank Country</h4>
               <p className="text-[1a1a1a]">Zimbabwe</p>
             </div>
             <div>
-              <h4 className="text-sm text-[#656565]">Bank Name</h4>
+              <h4 className="text-sm text-muted-foreground">Bank Name</h4>
               <p className="text-[1a1a1a]">Bank of Zimbabwe</p>
             </div>
             <div>
-              <h4 className="text-sm text-[#656565]">Bank Account Number</h4>
+              <h4 className="text-sm text-muted-foreground">
+                Bank Account Number
+              </h4>
               <p className="text-[1a1a1a]">8732742434</p>
             </div>
             <div>
-              <h4 className="text-sm text-[#656565]">Branch Code</h4>
+              <h4 className="text-sm text-muted-foreground">Branch Code</h4>
               <p className="text-[1a1a1a]">BoZ 32</p>
             </div>
           </div>

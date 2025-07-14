@@ -1,3 +1,4 @@
+"use client";
 import {
   Banknote,
   ChevronRight,
@@ -24,7 +25,6 @@ import {
 } from "./ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
-import { Input } from "./ui/input";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,6 +32,8 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const sidebarItems = [
   {
@@ -67,42 +69,60 @@ const sidebarItems = [
 ];
 
 const AppSidebar = () => {
+  const pathname = usePathname();
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="">
         <Link href="/">
           <Image src="/logo.svg" width={106} height={33} alt="logo" />
         </Link>
-        {/* <SidebarMenu className="flex items-center"> */}
-        {/* <SidebarMenuItem className=""> */}
-        {/* <Search className="absolute top-1/5 left-2" /> */}
-        {/* <Search className="" /> */}
-        {/* <SidebarInput placeholder="Search anything..." className="" /> */}
-        {/* <Input type="search" placeholder="Search anything..." className="" /> */}
-        {/* </SidebarMenuItem> */}
-        {/* </SidebarMenu> */}
+        <SidebarMenu className="mt-2">
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              className="w-11/12 pl-2 pr-2 data-[collapsed=true]:justify-center"
+            >
+              <div className="flex items-center w-11/12 gap-2 border p-1">
+                <Search className="h-4 w-4 text-muted-foreground" />
+                <SidebarInput
+                  placeholder="Search..."
+                  className="[&_input]:!border-none [&_input]:!ring-0 [&_input]:!outline-none data-[state=open]:!ring-0 !bg-transparent !outline-none focus:!outline-none !ring-0 focus:!ring-0 border-none focus:border-none !focus:ring-0 outline-0 !focus:border-0 !focus:outline-none !p-0 !text-sm data-[collapsible=icon]:hidden"
+                />
+              </div>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarHeader>
       <SidebarContent className="flex justify-between">
         <SidebarGroup className="">
           {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
-              {sidebarItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton
-                    asChild
-                    className="pl-4 py-2 focus:font-medium"
-                  >
-                    <Link
-                      href={item.url}
-                      className="border-1 border-transparent focus:bg-[#C5EBCB]"
+              {sidebarItems.map((item) => {
+                const isActive = pathname === item.url;
+                console.log("checking...");
+                console.log("isActive", isActive);
+                console.log("pathname", pathname);
+                console.log("item.url", item.url);
+                return (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton
+                      asChild
+                      className={`pl-4 py-2 focus:font-medium ${
+                        isActive && "bg-[#C5EBCB]"
+                      }`}
                     >
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+                      <Link
+                        href={item.url}
+                        className="border-1 border-transparent"
+                      >
+                        <item.icon />
+                        <span>{item.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -115,8 +135,10 @@ const AppSidebar = () => {
                   className="pl-4 py-2 focus:font-medium"
                 >
                   <Link
-                    href="#"
-                    className="border-1 border-transparent focus:bg-[#C5EBCB]"
+                    href="/settings"
+                    className={`border-1 border-transparent focus:bg-[#C5EBCB] ${
+                      pathname.startsWith("/settings") && "bg-[#C5EBCB]"
+                    }`}
                   >
                     <Settings />
                     <span>Settings</span>

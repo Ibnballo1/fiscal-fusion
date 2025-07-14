@@ -12,7 +12,7 @@ const EmailAuth = () => {
           height={18}
           alt="google icon"
         />
-        <span className="text-sm font-medium text-[#1A1A1A]">
+        <span className="text-sm font-medium text-foreground">
           Sign up with Google
         </span>
       </Button>
@@ -24,7 +24,7 @@ const EmailAuth = () => {
           height={20}
           alt="google icon"
         />
-        <span className="text-sm font-medium text-[#1A1A1A]">
+        <span className="text-sm font-medium text-foreground">
           Sign up with Apple
         </span>
       </Button> */}

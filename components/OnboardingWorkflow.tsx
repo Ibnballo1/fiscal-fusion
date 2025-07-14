@@ -84,7 +84,7 @@ export default function Component() {
                       ? "border-green-500 text-white"
                       : step.active
                       ? "border-[#AE8C00] text-[#AE8C00]"
-                      : "border-[#E3E3E3] text-[#656565]"
+                      : "border-[#E3E3E3] text-muted-foreground"
                   }`}
                 >
                   <div

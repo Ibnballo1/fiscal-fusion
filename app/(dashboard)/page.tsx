@@ -153,10 +153,10 @@ export default function Home() {
             <ShoppingBag className="h-7 w-7" style={{ color: "#7A1F1F" }} />
           </div>
           <div className="w-[300px] flex flex-col justify-center items-center">
-            <h3 className="font-medium text-xl text-[#1a1a1a]">
+            <h3 className="font-medium text-xl text-foreground">
               Manage Reseller
             </h3>
-            <p className="text-center text-[#656565]">
+            <p className="text-center text-muted-foreground">
               Go to the Resellers page to manage reseller accounts and settings.
             </p>
           </div>
@@ -170,8 +170,10 @@ export default function Home() {
             <Users2 className="h-7 w-7" style={{ color: "#7A1F1F" }} />
           </div>
           <div className="w-[300px] flex flex-col justify-center items-center">
-            <h3 className="font-medium text-xl text-[#1a1a1a]">View Clients</h3>
-            <p className="text-center text-[#656565]">
+            <h3 className="font-medium text-xl text-foreground">
+              View Clients
+            </h3>
+            <p className="text-center text-muted-foreground">
               Visit the Client dashboard to manage client info and activities.
             </p>
           </div>

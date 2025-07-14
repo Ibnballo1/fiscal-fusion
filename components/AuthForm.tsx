@@ -32,7 +32,7 @@ export default function AuthForm() {
         {/* LOGO */}
         <HeaderLogo />
         <CardTitle>
-          <h1 className="text-4xl font-medium text-[#1A1A1A]">
+          <h1 className="text-4xl font-medium text-foreground">
             Welcome {pathname === "/sign-in" && <span>back</span>}!
           </h1>
         </CardTitle>
@@ -105,7 +105,7 @@ export default function AuthForm() {
         </div>
       </CardFooter>
       <div className="mt-12 w-full self-baseline flex justify-between">
-        <Link href="#" className="text-[#656565] font-normal">
+        <Link href="#" className="text-muted-foreground font-normal">
           Privacy Policy
         </Link>
         <h3 className="text-[#DE8D25] text-xl">Fiscal Fusion</h3>
