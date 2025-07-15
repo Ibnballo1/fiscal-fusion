@@ -60,12 +60,12 @@ const AddResellerForm = () => {
       <Form {...form}>
         <DialogTrigger asChild>
           <Button className="bg-[#235E2F]" variant="default">
-            Add Reseller
+            Add New Client
           </Button>
         </DialogTrigger>
         <DialogContent className="pt-3">
           <DialogHeader className="border-b px-3 pb-3">
-            <DialogTitle>Add Reseller</DialogTitle>
+            <DialogTitle>Add New Client</DialogTitle>
           </DialogHeader>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -79,7 +79,7 @@ const AddResellerForm = () => {
                   <FormItem className="w-1/2">
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Reseller Name" />
+                      <Input placeholder="Client Name" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -111,7 +111,7 @@ const AddResellerForm = () => {
                   >
                     <FormControl>
                       <SelectTrigger className="w-full">
-                        <SelectValue placeholder="Enter Reseller's Region" />
+                        <SelectValue placeholder="Enter Client's Region" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -134,7 +134,7 @@ const AddResellerForm = () => {
               <Button variant="outline">Cancel</Button>
             </DialogClose>
             <Button type="submit" className="bg-[#235E2F]">
-              Add Reseller
+              Add New Client
             </Button>
           </DialogFooter>
         </DialogContent>
