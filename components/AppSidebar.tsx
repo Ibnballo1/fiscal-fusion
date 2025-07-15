@@ -111,13 +111,15 @@ const AppSidebar = () => {
                     )}
                     <SidebarMenuButton
                       asChild
-                      className={`pl-4 py-2 focus:font-medium text-muted-foreground ${
-                        isActive && "bg-[#C5EBCB] text-primary"
+                      className={`pl-4 hover:bg-muted hover:text-foreground transition-colors py-2 focus:font-medium text-muted-foreground relative ${
+                        isActive &&
+                        "bg-[#C5EBCB]/90 text-primary before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-primary"
                       }`}
                     >
                       <Link
                         href={item.url}
                         className="border-1 border-transparent"
+                        title={item.title}
                       >
                         <item.icon />
                         <span>{item.title}</span>
