@@ -4,6 +4,7 @@ import * as React from "react";
 import * as RechartsPrimitive from "recharts";
 
 import { cn } from "@/lib/utils";
+import { Payload } from "recharts/types/component/DefaultTooltipContent";
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const;
@@ -109,8 +110,8 @@ type TooltipPayloadItem = {
   dataKey?: string;
   value?: number | string;
   color?: string;
-  payload?: Record<string, any>;
-  [key: string]: any;
+  payload?: Record<string, unknown>;
+  [key: string]: unknown;
 };
 
 function ChartTooltipContent({
@@ -268,7 +269,7 @@ function ChartLegendContent({
   verticalAlign = "bottom",
   nameKey,
 }: React.ComponentProps<"div"> & {
-  payload?: any[];
+  payload?: Payload<string, string>[];
   verticalAlign?: "top" | "bottom" | "middle";
   hideIcon?: boolean;
   nameKey?: string;
