@@ -1,7 +1,5 @@
 import ClientActivities from "@/components/ClientActivities";
-import OnboardWorkFlow from "@/components/OnboardingWorkflow";
 import ResellerLogPage from "@/components/ResellerLogs";
-import ResellerPerformanceAnalytics from "@/components/ResellerPerformanceAnalytics";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,15 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Banknote,
-  BriefcaseBusiness,
-  Check,
-  Download,
-  Power,
-  ShoppingBag,
-  Users2,
-} from "lucide-react";
+import { BriefcaseBusiness, Check, Download, Users2 } from "lucide-react";
 
 const Client = () => {
   const cardList = [
@@ -46,38 +36,38 @@ const Client = () => {
     },
   ];
 
-  const tableData = [
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "2m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "Fraud Flag",
-      alertColor: "#ED0519",
-      time: "3m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "8m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "10m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "Fraud Flag",
-      alertColor: "#ED0519",
-      time: "31m ago",
-    },
-  ];
+  // const tableData = [
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "warning",
+  //     alertColor: "#AE8C00",
+  //     time: "2m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "Fraud Flag",
+  //     alertColor: "#ED0519",
+  //     time: "3m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "warning",
+  //     alertColor: "#AE8C00",
+  //     time: "8m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "warning",
+  //     alertColor: "#AE8C00",
+  //     time: "10m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "Fraud Flag",
+  //     alertColor: "#ED0519",
+  //     time: "31m ago",
+  //   },
+  // ];
 
   return (
     <div className="">

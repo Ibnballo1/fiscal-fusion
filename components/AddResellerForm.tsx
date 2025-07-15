@@ -5,7 +5,6 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -76,7 +75,7 @@ const AddResellerForm = () => {
               <FormField
                 control={form.control}
                 name="name"
-                render={({ field }) => (
+                render={() => (
                   <FormItem className="w-1/2">
                     <FormLabel>Name</FormLabel>
                     <FormControl>
@@ -89,7 +88,7 @@ const AddResellerForm = () => {
               <FormField
                 control={form.control}
                 name="email"
-                render={({ field }) => (
+                render={() => (
                   <FormItem className="w-1/2">
                     <FormLabel>Email</FormLabel>
                     <FormControl>

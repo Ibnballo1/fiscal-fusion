@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Banknote, Download, Power, ShoppingBag, Users2 } from "lucide-react";
+import { Banknote, Download, ShoppingBag, Users2 } from "lucide-react";
 
 const Reseller = () => {
   const cardList = [
@@ -44,38 +44,38 @@ const Reseller = () => {
     },
   ];
 
-  const tableData = [
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "2m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "Fraud Flag",
-      alertColor: "#ED0519",
-      time: "3m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "8m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "10m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "Fraud Flag",
-      alertColor: "#ED0519",
-      time: "31m ago",
-    },
-  ];
+  // const tableData = [
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "warning",
+  //     alertColor: "#AE8C00",
+  //     time: "2m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "Fraud Flag",
+  //     alertColor: "#ED0519",
+  //     time: "3m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "warning",
+  //     alertColor: "#AE8C00",
+  //     time: "8m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "warning",
+  //     alertColor: "#AE8C00",
+  //     time: "10m ago",
+  //   },
+  //   {
+  //     message: "Payment processing delay for INV-29182",
+  //     alertType: "Fraud Flag",
+  //     alertColor: "#ED0519",
+  //     time: "31m ago",
+  //   },
+  // ];
 
   return (
     <div className="">

@@ -1,7 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { Bell } from "lucide-react";
 import {
   Breadcrumb,

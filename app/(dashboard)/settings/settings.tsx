@@ -2,9 +2,7 @@ import {
   Banknote,
   CaseUpper,
   ChevronRight,
-  CircleDollarSignIcon,
   Clock2,
-  DollarSign,
   UserCog2,
 } from "lucide-react";
 import Link from "next/link";

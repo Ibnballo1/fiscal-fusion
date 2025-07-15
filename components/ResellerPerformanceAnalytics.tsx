@@ -5,16 +5,13 @@ import ClientCountChart from "./ClientCountChart";
 import Image from "next/image";
 import { Separator } from "./ui/separator";
 import { BriefcaseBusiness, ShieldCheckIcon } from "lucide-react";
-import Link from "next/link";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
-import Reseller from "@/app/(dashboard)/resellers/page";
 import ResellerPage from "@/app/(dashboard)/resellers/[reseller]/page";
 
 export default function ResellerPerformanceAnalytics() {
@@ -174,7 +171,7 @@ export default function ResellerPerformanceAnalytics() {
                 </SheetTrigger>
                 <SheetContent className="overflow-y-scroll w-1/2 !max-w-10/12">
                   <SheetHeader className="border-b">
-                    <SheetTitle>Reseller's Dashboard Overview</SheetTitle>
+                    <SheetTitle>Reseller&apos;s Dashboard Overview</SheetTitle>
                   </SheetHeader>
                   <ResellerPage />
                 </SheetContent>

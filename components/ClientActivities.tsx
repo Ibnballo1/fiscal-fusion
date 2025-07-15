@@ -11,26 +11,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Search,
-  MoreHorizontal,
-  Download,
-  ChevronDown,
-  Users,
-  DollarSign,
-  FileText,
-  Shield,
-  Activity,
-  HelpCircle,
-  BarChart3,
-} from "lucide-react";
+import { Search, MoreHorizontal, Download } from "lucide-react";
 import {
   LineChart,
   Line,

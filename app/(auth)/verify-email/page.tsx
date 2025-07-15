@@ -5,7 +5,6 @@ import RightImgBackground from "@/components/RightImageBg";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
@@ -28,7 +27,7 @@ import {
 } from "@/components/ui/input-otp";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 const FormSchema = z.object({
   pin: z.string().min(6, {
@@ -37,7 +36,7 @@ const FormSchema = z.object({
 });
 
 const VerifyEmailPage = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -117,7 +116,7 @@ const VerifyEmailPage = () => {
                   </Button>
                   <div className="mt-2">
                     <p className="text-foreground text-sm">
-                      Didn't receive any code?{" "}
+                      Didn&apos;t receive any code?{" "}
                       <Link href="#" className="text-[#1459FC]">
                         Click to resend
                       </Link>

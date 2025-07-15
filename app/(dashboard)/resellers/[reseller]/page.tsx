@@ -10,22 +10,12 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
-  Banknote,
   Calendar,
   CircleDollarSign,
   ComputerIcon,
   CreditCardIcon,
   Crown,
   PenLine,
-  ShoppingBag,
   Users2,
 } from "lucide-react";
 import Image from "next/image";

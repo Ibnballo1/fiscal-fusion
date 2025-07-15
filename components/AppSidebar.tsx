@@ -21,7 +21,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarSeparator,
 } from "./ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
@@ -32,7 +31,6 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const sidebarItems = [

@@ -4,7 +4,6 @@ import EmailAuth from "@/app/features/EmailAuth";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -13,7 +12,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Image from "next/image";
 // import { Separator } from "./separator";
 import { Checkbox } from "./ui/checkbox";
 import Link from "next/link";
