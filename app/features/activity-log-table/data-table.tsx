@@ -48,8 +48,8 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-none border">
-      <Table>
+    <div className="rounded-none border-none">
+      <Table className="mb-2">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
@@ -73,7 +73,7 @@ export function DataTable<TData, TValue>({
             </TableRow>
           ))}
         </TableHeader>
-        <TableBody>
+        <TableBody className="border-b">
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
               <TableRow
@@ -95,24 +95,7 @@ export function DataTable<TData, TValue>({
         </TableBody>
       </Table>
 
-      {/* <div className="flex items-center justify-end space-x-2 py-4">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          Previous
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          Next
-        </Button>
-      </div> */}
+      {/* PAGINATION */}
 
       <div className="flex items-center justify-between px-2">
         <div className="text-muted-foreground flex-1 text-sm">
@@ -121,7 +104,6 @@ export function DataTable<TData, TValue>({
         </div>
         <div className="flex items-center space-x-6 lg:space-x-8">
           <div className="flex items-center space-x-2">
-            <p className="text-sm font-medium">Rows per page</p>
             <Select
               value={`${table.getState().pagination.pageSize}`}
               onValueChange={(value) => {
@@ -142,50 +124,22 @@ export function DataTable<TData, TValue>({
               </SelectContent>
             </Select>
           </div>
-          <div className="flex w-[100px] items-center justify-center text-sm font-medium">
-            Page {table.getState().pagination.pageIndex + 1} of{" "}
-            {table.getPageCount()}
-          </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-end space-x-2 py-4">
             <Button
               variant="outline"
-              size="icon"
-              className="hidden size-8 lg:flex"
-              onClick={() => table.setPageIndex(0)}
-              disabled={!table.getCanPreviousPage()}
-            >
-              <span className="sr-only">Go to first page</span>
-              <ChevronsLeft />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="size-8"
+              size="sm"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
-              <span className="sr-only">Go to previous page</span>
-              <ChevronLeft />
+              Previous
             </Button>
             <Button
               variant="outline"
-              size="icon"
-              className="size-8"
+              size="sm"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
-              <span className="sr-only">Go to next page</span>
-              <ChevronRight />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="hidden size-8 lg:flex"
-              onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-              disabled={!table.getCanNextPage()}
-            >
-              <span className="sr-only">Go to last page</span>
-              <ChevronsRight />
+              Next
             </Button>
           </div>
         </div>
