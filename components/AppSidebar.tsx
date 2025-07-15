@@ -1,14 +1,14 @@
 "use client";
 import {
-  Banknote,
   ChevronRight,
+  CircleDollarSign,
+  CreditCard,
   Headset,
-  HeartPlus,
   LayoutDashboard,
+  Receipt,
   Search,
   Settings,
-  ShoppingBag,
-  Users2,
+  Wand2,
 } from "lucide-react";
 import {
   Sidebar,
@@ -32,6 +32,7 @@ import {
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { usePathname } from "next/navigation";
+import { Separator } from "@radix-ui/react-separator";
 
 const sidebarItems = [
   {
@@ -40,24 +41,29 @@ const sidebarItems = [
     icon: LayoutDashboard,
   },
   {
-    title: "Resellers",
-    url: "/resellers",
-    icon: ShoppingBag,
-  },
-  {
     title: "Clients",
     url: "/clients",
-    icon: Users2,
+    icon: CircleDollarSign,
   },
   {
-    title: "Financials",
-    url: "/financials",
-    icon: Banknote,
+    title: "Devices",
+    url: "/devices",
+    icon: Receipt,
+  },
+  // {
+  //   title: "Customization",
+  //   url: "/customization",
+  //   icon: ChartLine,
+  // },
+  {
+    title: "Commissions",
+    url: "/commisions",
+    icon: Wand2,
   },
   {
-    title: "System Health",
-    url: "#",
-    icon: HeartPlus,
+    title: "Billing & Invoices",
+    url: "/billing",
+    icon: CreditCard,
   },
   {
     title: "Help & Support",
@@ -74,7 +80,7 @@ const AppSidebar = () => {
         <Link href="/">
           <Image src="/logo.svg" width={106} height={33} alt="logo" />
         </Link>
-        <SidebarMenu className="mt-2">
+        <SidebarMenu className="mt-3">
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
@@ -96,18 +102,17 @@ const AppSidebar = () => {
           {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
-              {sidebarItems.map((item) => {
+              {sidebarItems.map((item, index) => {
                 const isActive = pathname === item.url;
-                console.log("checking...");
-                console.log("isActive", isActive);
-                console.log("pathname", pathname);
-                console.log("item.url", item.url);
                 return (
                   <SidebarMenuItem key={item.title}>
+                    {index === sidebarItems.length - 1 && (
+                      <Separator className="mb-3 border-b-1" />
+                    )}
                     <SidebarMenuButton
                       asChild
-                      className={`pl-4 py-2 focus:font-medium ${
-                        isActive && "bg-[#C5EBCB]"
+                      className={`pl-4 py-2 focus:font-medium text-muted-foreground ${
+                        isActive && "bg-[#C5EBCB] text-primary"
                       }`}
                     >
                       <Link
@@ -127,15 +132,16 @@ const AppSidebar = () => {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem className="border-b pb-2">
+              <SidebarMenuItem className="border-b">
                 <SidebarMenuButton
                   asChild
                   className="pl-4 py-2 focus:font-medium"
                 >
                   <Link
                     href="/settings"
-                    className={`border-1 border-transparent focus:bg-[#C5EBCB] ${
-                      pathname.startsWith("/settings") && "bg-[#C5EBCB]"
+                    className={`border-1 mb-4 border-transparent focus:bg-[#C5EBCB] text-muted-foreground ${
+                      pathname.startsWith("/settings") &&
+                      "bg-[#C5EBCB] text-primary"
                     }`}
                   >
                     <Settings />
