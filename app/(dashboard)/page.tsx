@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import React from "react";
+import InvoiceTableWrapper from "@/components/InvoiceTableWrapper";
 
 export default function Home() {
   const [dateFilter, setDateFilter] = React.useState<string>("last24hrs");
@@ -210,7 +211,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <InvoiceTable />
+          <InvoiceTableWrapper />
         </div>
       </div>
     </div>

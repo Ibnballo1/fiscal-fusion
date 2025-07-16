@@ -1,13 +1,13 @@
 "use client";
 import {
   ChevronRight,
-  CircleDollarSign,
   CreditCard,
   Headset,
   LayoutDashboard,
   Receipt,
   Search,
   Settings,
+  Users2,
   Wand2,
 } from "lucide-react";
 import {
@@ -43,18 +43,13 @@ const sidebarItems = [
   {
     title: "Clients",
     url: "/clients",
-    icon: CircleDollarSign,
+    icon: Users2,
   },
   {
     title: "Devices",
     url: "/devices",
     icon: Receipt,
   },
-  // {
-  //   title: "Customization",
-  //   url: "/customization",
-  //   icon: ChartLine,
-  // },
   {
     title: "Commissions",
     url: "/commisions",

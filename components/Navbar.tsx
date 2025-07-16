@@ -70,8 +70,12 @@ const Navbar = () => {
       {/* RIGHT BAR */}
       <div className="flex items-center gap-4 justify-end flex-1/2">
         <Bell className="h-5 w-5 text-gray-500 cursor-pointer" />
-        <Button variant="outline">Request Payout</Button>
-        <Button variant="outline">Generate Proposal</Button>
+        {pathname === "/" && (
+          <>
+            <Button variant="outline">Request Payout</Button>
+            <Button variant="outline">Generate Proposal</Button>
+          </>
+        )}
         <AddResellerForm />
       </div>
     </nav>
