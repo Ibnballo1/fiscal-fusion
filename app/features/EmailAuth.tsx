@@ -16,18 +16,6 @@ const EmailAuth = () => {
           Sign up with Google
         </span>
       </Button>
-      {/* APPLE BUTTON */}
-      {/* <Button variant="outline" className="py-2.5 px-4">
-        <Image
-          src="/ri_apple-fill.png"
-          width={20}
-          height={20}
-          alt="google icon"
-        />
-        <span className="text-sm font-medium text-foreground">
-          Sign up with Apple
-        </span>
-      </Button> */}
     </div>
   );
 };

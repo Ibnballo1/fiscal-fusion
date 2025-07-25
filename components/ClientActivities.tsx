@@ -269,31 +269,31 @@ export default function ClientActivities() {
                 <table className="w-full">
                   <thead className="bg-gray-50 border-b">
                     <tr>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         No.
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Date
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Invoice #
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Type
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Amount
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Status
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Receipt
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Error
                       </th>
-                      <th className="text-left p-4 font-medium text-sm text-gray-600">
+                      <th className="text-center p-4 font-medium text-sm text-gray-600">
                         Action
                       </th>
                     </tr>
