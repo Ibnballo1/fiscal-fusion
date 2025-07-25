@@ -52,7 +52,7 @@ const sidebarItems = [
   },
   {
     title: "Commissions",
-    url: "/commisions",
+    url: "/commissions",
     icon: Wand2,
   },
   {
@@ -62,7 +62,7 @@ const sidebarItems = [
   },
   {
     title: "Help & Support",
-    url: "#",
+    url: "/supports",
     icon: Headset,
   },
 ];
@@ -98,7 +98,9 @@ const AppSidebar = () => {
           <SidebarGroupContent>
             <SidebarMenu>
               {sidebarItems.map((item, index) => {
-                const isActive = pathname === item.url;
+                const isActive =
+                  pathname === item.url || pathname.startsWith(item.url + "/");
+
                 return (
                   <SidebarMenuItem key={item.title}>
                     {index === sidebarItems.length - 1 && (
@@ -107,8 +109,7 @@ const AppSidebar = () => {
                     <SidebarMenuButton
                       asChild
                       className={`pl-4 hover:bg-muted hover:text-foreground transition-colors py-2 focus:font-medium text-muted-foreground relative ${
-                        isActive &&
-                        "bg-[#C5EBCB]/90 text-primary before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-primary"
+                        isActive && "bg-[#C5EBCB]/90 text-primary"
                       }`}
                     >
                       <Link

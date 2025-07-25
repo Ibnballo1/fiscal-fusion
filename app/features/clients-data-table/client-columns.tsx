@@ -31,7 +31,7 @@ export const columns: ColumnDef<Clients>[] = [
     accessorKey: "id",
     header: () => <div className="text-center">No</div>,
     cell: ({ row }) => (
-      <div className="text-sm text-gray-600 flex justify-center h-10 items-center border-r border-gray-200">
+      <div className="text-sm text-gray-600 flex justify-center h-20 items-center border-r border-gray-200">
         {row.getValue("id")}
       </div>
     ),
