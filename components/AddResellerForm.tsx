@@ -29,7 +29,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { usePathname } from "next/navigation";
 
 type Field = {
   name: string;
@@ -44,16 +43,6 @@ interface AddItemFormProps {
   fields: Field[];
   onSubmit: (data: Record<string, string>) => void;
 }
-
-const formSchema = z.object({
-  name: z.string().min(2).max(50),
-  email: z.string().email(),
-  region: z
-    .string({
-      required_error: "Please select a country",
-    })
-    .min(1, "Please select a country"),
-});
 
 const AddItemForm = ({ type, fields, onSubmit }: AddItemFormProps) => {
   const formSchema = z.object(

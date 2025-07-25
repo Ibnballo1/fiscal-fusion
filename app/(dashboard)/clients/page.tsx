@@ -1,11 +1,8 @@
 "use client";
 
-import DashboardCards from "@/components/DashboardCards";
 import { Button } from "@/components/ui/button";
 
 import {
-  AlertTriangle,
-  CircleDollarSign,
   Power,
   Search,
   TrendingUp,
@@ -14,7 +11,6 @@ import {
   UserX,
 } from "lucide-react";
 
-import InvoiceTable from "@/components/InvoiceTable";
 import {
   Select,
   SelectContent,

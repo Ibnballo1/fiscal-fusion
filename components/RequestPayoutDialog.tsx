@@ -56,7 +56,7 @@ export function RequestPayoutDialog({
               Select Payment Method
             </h3>
             <p className="text-sm text-gray-600">
-              Select how you'd like to get paid
+              Select how you&apos;d like to get paid
             </p>
           </div>
 

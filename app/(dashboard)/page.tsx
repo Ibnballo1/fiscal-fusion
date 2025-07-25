@@ -3,9 +3,8 @@
 import DashboardCards from "@/components/DashboardCards";
 import { Button } from "@/components/ui/button";
 
-import { AlertTriangle, CircleDollarSign, Power, Search } from "lucide-react";
+import { Power, Search } from "lucide-react";
 
-import InvoiceTable from "@/components/InvoiceTable";
 import {
   Select,
   SelectContent,
@@ -21,63 +20,6 @@ export default function Home() {
   const [sourceFilter, setSourceFilter] = React.useState<string>("all");
   const [statusFilter, setStatusFilter] = React.useState<string>("all");
 
-  const cardList = [
-    {
-      title: "Total Clients",
-      icon: <CircleDollarSign />,
-      value: "1,344",
-      // description: "Card Description",
-      totalActive: "1000",
-      totalInactive: "344",
-    },
-    {
-      title: "Compliance Health",
-      icon: <AlertTriangle />,
-      value: "92%",
-      totalActive: "",
-      footer: "Compliant",
-    },
-    {
-      title: "Monthly Earnings",
-      icon: <AlertTriangle />,
-      value: "24,125",
-      totalActive: "$2,000",
-      totalInactive: "$7,500",
-    },
-  ];
-
-  const tableData = [
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "2m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "Fraud Flag",
-      alertColor: "#ED0519",
-      time: "3m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "8m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "warning",
-      alertColor: "#AE8C00",
-      time: "10m ago",
-    },
-    {
-      message: "Payment processing delay for INV-29182",
-      alertType: "Fraud Flag",
-      alertColor: "#ED0519",
-      time: "31m ago",
-    },
-  ];
   return (
     <div className="flex flex-col gap-4 p-4">
       {/* TOTALS */}

@@ -27,7 +27,7 @@ export function QRScanDialog({
   const [scanResult, setScanResult] = useState<string | null>(null);
 
   // Generate QR code data based on client and session
-  const qrData = `DEVICE_CONNECT:${clientId}:${Date.now()}`;
+  // const qrData = `DEVICE_CONNECT:${clientId}:${Date.now()}`;
 
   // Simulate QR code scanning process
   useEffect(() => {

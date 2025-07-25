@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { CommissionStats } from "@/components/CommissionStats";
 import { PerformanceOverview } from "@/components/PerformanceOverview";
 import { CommissionHistory } from "@/components/CommissionHistory";

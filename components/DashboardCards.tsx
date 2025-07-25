@@ -110,19 +110,6 @@ function MetricCard({ data }: { data: MetricCardData }) {
 }
 
 function ComplianceCard({ data }: { data: ComplianceCardData }) {
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "compliant":
-        return "text-green-600";
-      case "warning":
-        return "text-yellow-600";
-      case "critical":
-        return "text-red-600";
-      default:
-        return "text-gray-600";
-    }
-  };
-
   return (
     <Card className="transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
